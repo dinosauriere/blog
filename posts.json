@@ -10,6 +10,12 @@
         "title": "TEST",
         "date": "May 3, 2026",
         "content": "Test to see if I can simply update the site via github, not with a code editor, then needing to git commit push etc. If this works then its way faster"
+    },
+    {
+        "id": 3,
+        "title": "IT WORKS!",
+        "date": "May 3, 2026",
+        "content": "THE TEST WORKS YIPPIE!"
     }
     
 ]
