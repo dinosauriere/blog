@@ -4,5 +4,12 @@
         "title": "First Blog Post",
         "date": "May 3, 2026",
         "content": "Made this website with the help of those stupid ass fucking clankers. Maybe I should just run a local LLM, thats a tad bit more Eco friendly. BUT TO BE FAIR AI DOESNT AFFECT THE WORLD SO MUCH AS PEOPLE MAKE IT OUT TO BE. Its more of the big ass rich ass billionaires who pollute the world. But I digress, Hi this is my website, welcome!"
+    },
+    {
+        "id": 2,
+        "title": "TEST",
+        "date": "May 3, 2026",
+        "content": "Test to see if I can simply update the site via github, not with a code editor, then needing to git commit push etc. If this works then its way faster"
     }
+    
 ]
