@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino's Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background-animation"></div>
+
+<div class="header">
+    <h1>Dino's Blog</h1>
+    <p>Welcome!</p>
+    <div class="status-line">
+        <span class="status-indicator"></span>
+        <span class="status-text" id="statusText">currently: thinking about cars</span>
+    </div>
+</div>
+
+<div class="cards-container">
+    <div class="card" onclick="openModal('about')">
+        <span class="card-label">About Me</span>
+    </div>
+    <div class="card" onclick="openModal('music')">
+        <span class="card-label">Music</span>
+    </div>
+    <div class="card" onclick="openModal('currentMusic')">
+        <span class="card-label">Stuff I Listen To</span>
+    </div>
+    <div class="card" onclick="openModal('games')">
+        <span class="card-label">Fav Games</span>
+    </div>
+    <div class="card" onclick="openModal('garage')">
+        <span class="card-label">Garage</span>
+    </div>
+</div>
+
+<!-- Blog Section -->
+<div class="blog-section">
+    <div class="section-header">
+        <h2>What's On My Mind?</h2>
+        <div class="header-underline"></div>
+    </div>
+    <p class="blog-subtitle">Random thoughts, rants, and whatever's going on in my head</p>
+    <div id="blog-posts" class="blog-posts"></div>
+</div>
+
+<!-- About Modal -->
+<div id="aboutModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>About Me</h2>
+            <button class="close-btn" onclick="closeModal('about')">&times;</button>
+        </div>
+
+        <p>hi im dino</p>
+
+        <p>this is just my internet space where i dump whatever im into at the moment. music, cars, random thoughts, stuff like that. it wasnt supposed to become a “site” but here we are</p>
+
+        <p>i made this after seeing those old myspace type pages and just wanted my own version. something that actually feels personal instead of the usual boring profile stuff</p>
+
+        <p>im still learning web dev while building this. most of it started with ai helping me out because i didnt really know js css or html properly, but now im slowly starting to actually understand whats going on</p>
+
+        <p>im in lycée in luxembourg, computer science section, final year</p>
+
+        <p>outside of that its mostly cars. like way too much cars. music all over the place, cooking sometimes when i feel like it, and my cat who genuinely acts like he runs the house</p>
+
+        <p>also this site is never finished. it just changes whenever i get a new obsession or decide something looks wrong again</p>
+
+        <p>current state of mind is basically just: thinking about cars i cant afford, listening to some random ass songs, and tweaking this website for no reason</p>
+    </div>
+</div>
+
+<!-- Games Modal -->
+<div id="gamesModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Fav Games</h2>
+            <button class="close-btn" onclick="closeModal('games')">&times;</button>
+        </div>
+        
+        <div class="profile-buttons steam-button-container">
+            <a href="https://steamcommunity.com/id/Diinosaurier/" target="_blank" class="profile-btn steam-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/960px-Steam_icon_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20220611141426" alt="Steam" class="steam-icon">
+                Steam Profile
+            </a>
+        </div>
+
+        <h3>Here are some of my favorite games!</h3>
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/Metaphor_Refantazio_Cover_Art.png" alt="Metaphor: ReFantazio">
+            </div>
+            <div class="game-card">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/287390/capsule_616x353.jpg?t=1725444535" alt="Game Cover">
+            </div>
+            <div class="game-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg" alt="Cyberpunk 2077">
+            </div>
+            <div class="game-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/52/Monster_Hunter_Wilds_cover.png" alt="Monster Hunter Wilds">
+            </div>
+            <div class="game-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/65/Persona_3_Reload_box_art.jpg/250px-Persona_3_Reload_box_art.jpg" alt="Persona 3 Reload">
+            </div>
+            <div class="game-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2d/Brawlhalla_BoxArt.jpg" alt="Brawlhalla">
+            </div>
+        </div>
+        <p class="games-note">I don't really like Brawlhalla, but it has a chokehold on me ngl...</p>
+    </div>
+</div>
+
+<!-- Music Modal -->
+<div id="musicModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Music</h2>
+            <button class="close-btn" onclick="closeModal('music')">&times;</button>
+        </div>
+        <p>I LOVE MUSIC IT HAS BEEN A PART OF MY LIFE FOR AS LONG AS I CAN REMEMBER!</p>
+        <p>I have a WIDE variety of musical tastes, like one second i can listen to deathmetal, the next it could be some electronic music and then after that some typical balkan music.</p>
+        
+        <div class="profile-buttons music-button-container">
+            <a href="https://www.last.fm/user/DiinoLav" target="_blank" class="profile-btn lastfm-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Lastfm_logo.svg/960px-Lastfm_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Last.fm" class="profile-icon">
+                Last.fm Profile
+            </a>
+            <a href="https://open.spotify.com/user/21vw3agf626kr4b5e7hatti7a?si=546688adb1ca4d5c" target="_blank" class="profile-btn spotify-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/2024_Spotify_logo_without_text.svg/960px-2024_Spotify_logo_without_text.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Spotify" class="profile-icon">
+                Spotify Profile
+            </a>
+        </div>
+    </div> 
+</div>
+
+<div id="currentMusicModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Stuff I Listen To</h2>
+            <button class="close-btn" onclick="closeModal('currentMusic')">&times;</button>
+        </div>
+        
+        <div class="genre-buttons">
+            <button class="genre-btn active" onclick="showGenre('metal')">Metal</button>
+            <button class="genre-btn" onclick="showGenre('rap')">Rap</button>
+            <button class="genre-btn" onclick="showGenre('exyu')">Ex-Yu Songs</button>
+            <button class="genre-btn" onclick="showGenre('japanese')">Japanese Music</button>
+            <button class="genre-btn" onclick="showGenre('electronic')">Electronic Music</button>
+        </div>
+
+        <div class="genre-content-wrapper">
+            <div id="metal" class="genre-content active">
+                <h2>Metal</h2>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/05NpeTQWnzXS1d8ZqL4YFZ?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/15DLl1r2zi07Ssq5RT1yT0?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/19fYhk0wzXqUOoBqkPsYCP?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3cdaqIaPz4QMr8lTu4PYrv?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+            </div>
+
+            <div id="rap" class="genre-content">
+                <h2>Rap</h2>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5v84FE8shSW4V2AwteJRpw?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1q8DwZtQen5fvyB7cKbShC?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/53mCo1wDJ12iZNq9LgIeg2?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/56oGoEjA9eTZYgsttEFKY3?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+            </div>
+
+            <div id="exyu" class="genre-content">
+                <h2>Ex-Yu Songs</h2>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2AA8tQn2jOZsDsXCKlt0cF?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6fb6vOhA3x53g2cKhE1Alg?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1zbFa6eoGnqyhQZMLvSCOA?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5CIGxvjE9oWbMdTASqUHHu?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+            </div>
+
+            <div id="japanese" class="genre-content">
+                <h2>Japanese Music</h2>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3R0XM0PaKh2R7WYF8UJYe0?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3znIACSXPLn3HFCf7moZ28?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4pjFNyjGaoKgLTnndISP6V?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5floNyItopWZyB4IzKrJtW?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+            </div>
+
+            <div id="electronic" class="genre-content">
+                <h2>Electronic Music</h2>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4fHug3zCanK33sdvticISi?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/71Cid4UeolaHRzdbmMDAVb?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0gBfLS4aqbrr1ZvVv8dqWB?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+                <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2S6PttqbENA5jscXyLcZIT?utm_source=generator" width="100%" height="80" frameBOrder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Garage Modal -->
+<div id="garageModal" class="modal">
+    <div class="modal-content garage-modal">
+        <div class="modal-header">
+            <h2>My Garage</h2>
+            <button class="close-btn" onclick="closeModal('garage')">&times;</button>
+        </div>
+
+        <div class="garage-grid">
+            <div class="garage-card">
+                <h3>My Current Car: Golf MK7 2.0 TDI CRLB</h3>
+                <div class="car-image-placeholder">
+                    <p>🚗</p>
+                </div>
+                <div class="car-bio">
+                    <p>This Golf is my first car. It does its job, it starts every time, it's solid, whatever. That's about it.</p>
+                    <p>It's one of those typical European diesel daily cars. LED headlights, decent tech, nothing really exciting. I don't hate it, but I also don't feel anything for it.</p>
+                    <p>It just doesn't feel like *me*. It's more like something I ended up with, not something I actually wanted.</p>
+                    <p>I'm not attached to it at all — it gets me from A to B and that's literally where it ends.</p>
+                    <p>What I actually want is something that feels alive when you drive it. Not just "practical".</p>
+                </div>
+            </div>
+
+            <div class="garage-card dream-car-card">
+                <h3>Dream Car: Nissan 350Z</h3>
+                <div class="dream-car-image">
+                    <img src="https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/ea93686cb7f6bba23b9693c4dac92c0715d7c4cd/photos/rbL86Lgg-ZYbZuhFvBe-(edit).jpg?t=167847575119" alt="Nissan 350Z">
+                </div>
+
+                <div class="car-specs">
+                    <h4>Specifications</h4>
+                    <ul>
+                        <li><strong>Engine:</strong> 3.5L V6 VQ35</li>
+                        <li><strong>Power:</strong> 287 hp / 274 lb-ft torque</li>
+                        <li><strong>Transmission:</strong> Manual 6-speed</li>
+                        <li><strong>0-60 mph:</strong> 5.9 seconds</li>
+                    </ul>
+                </div>
+
+                <div class="dream-car-bio">
+                    <p>The 350Z is the opposite of my Golf in every way I actually care about.</p>
+                    <p>That VQ35 sound is insane. It doesn't just "run", it actually feels like it has character. Every video, every time I hear it, it just hits differently.</p>
+                    <p>The design is perfect to me. Nothing overcomplicated. Just wide, aggressive, and clean in a way modern cars don't really do anymore.</p>
+                    <p>This whole Z platform just feels right to me. Raw, simple, no fake luxury nonsense.</p>
+                    <p>My dad doesn't really get it. He keeps saying it's a two-seater and that I just want it to show off or whatever. But that's not even the point.</p>
+                    <p>I don't care. It's still the car I want. End of story.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Now Playing Bar -->
+<div class="now-playing-bar">
+    <div class="now-playing-content">
+        <div class="now-playing-info">
+            <span class="now-playing-label">now playing</span>
+        </div>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4c3mvGLs5py7PuvtO0AzR2?utm_source=generator" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+</div>
+
+<script>
+    // === STATUS CONFIG ===
+    const statuses = [
+        "currently: thinking about cars",
+        "currently: listening to music",
+        "currently: coding this site",
+        "currently: procrastinating",
+        "currently: vibing",
+        "currently: dreaming of a 350Z",
+        "currently: eating something",
+        "currently: existing"
+    ];
+
+    // Load blog posts
+    async function loadBlogPosts() {
+        try {
+            const response = await fetch('posts.json');
+            const posts = await response.json();
+            const blogContainer = document.getElementById('blog-posts');
+            
+            // Sort posts by date (newest first)
+            posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            posts.forEach((post, index) => {
+                const postElement = document.createElement('div');
+                postElement.className = 'blog-post';
+                postElement.style.animationDelay = `${index * 0.05}s`;
+                postElement.innerHTML = `
+                    <h3 class="blog-post-title">${post.title}</h3>
+                    <p class="blog-post-date">${post.date}</p>
+                    <p class="blog-post-content">${post.content}</p>
+                `;
+                blogContainer.appendChild(postElement);
+            });
+        } catch (error) {
+            console.error('Error loading blog posts:', error);
+        }
+    }
+
+    // Update status randomly
+    function updateStatus() {
+        const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+        const statusEl = document.getElementById('statusText');
+        statusEl.style.opacity = '0';
+        setTimeout(() => {
+            statusEl.textContent = randomStatus;
+            statusEl.style.opacity = '1';
+        }, 200);
+    }
+
+    // Load posts when page loads
+    document.addEventListener('DOMContentLoaded', loadBlogPosts);
+    
+    // Update status every 8 seconds
+    updateStatus();
+    setInterval(updateStatus, 8000);
+
+    function openModal(type) {
+        const modalMap = {
+            'about': 'aboutModal',
+            'music': 'musicModal',
+            'currentMusic': 'currentMusicModal',
+            'games': 'gamesModal',
+            'garage': 'garageModal'
+        };
+        const modal = document.getElementById(modalMap[type]);
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(type) {
+        const modalMap = {
+            'about': 'aboutModal',
+            'music': 'musicModal',
+            'currentMusic': 'currentMusicModal',
+            'games': 'gamesModal',
+            'garage': 'garageModal'
+        };
+        const modal = document.getElementById(modalMap[type]);
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    function showGenre(genre) {
+        const contents = document.querySelectorAll('.genre-content');
+        contents.forEach(content => content.classList.remove('active'));
+
+        const buttons = document.querySelectorAll('.genre-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        document.getElementById(genre).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    // Close modal when clicking outside the content
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    // Smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+</script>
+
+</body>
+</html>
